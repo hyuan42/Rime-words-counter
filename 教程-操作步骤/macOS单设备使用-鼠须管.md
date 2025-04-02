@@ -59,7 +59,7 @@ Enjoy it.
 ```
 Rime/
 └── lua/
-	└── words_counter.lua           #通过这个lua记录上屏数据
+    └── words_counter.lua           #通过这个lua记录上屏数据
 	
 └── py_wordscounter/
     ├── status_bar_app.py           #把字数显示在状态栏
