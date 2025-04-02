@@ -15,11 +15,11 @@ Rime-words-counter是一款用于rime输入法进行统计字数的脚本，按�
 
 # 效果预览
 #### Mac端 - 鼠须管
-在系统顶部状态栏 (menus bar)显示今日输入的字数，可以打开详细数据，进行测速、查看历史数据等操作。
+在系统顶部状态栏 (menus bar)显示今日输入的字数，可以打开详细数据，进行测速、查看历史数据等操作。  
 ![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/Mac%E6%BC%94%E7%A4%BA.gif?raw=true)
 
 #### Windows端 - 小狼毫
-在桌面生成一个悬浮窗口，显示今日输入的字数。可切换关闭/显示该悬浮窗口，可通过系统托盘图标打开详细数据，进行测速、查看历史数据等操作。
+在桌面生成一个悬浮窗口，显示今日输入的字数。可切换关闭/显示该悬浮窗口，可通过系统托盘图标打开详细数据，进行测速、查看历史数据等操作。  
 ![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/win%E6%BC%94%E7%A4%BA.gif?raw=true)
 
 #### 查看历史数据记录
