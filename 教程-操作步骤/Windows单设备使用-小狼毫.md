@@ -58,7 +58,7 @@ Enjoy it.
 ```
 Rime/
 └── lua/
-	└── words_counter.lua           #通过这个lua记录上屏数据
+    └── words_counter.lua           #通过这个lua记录上屏数据
 	
 └── py_wordscounter/
     ├── words_counter. py           #处理csv文档的数据的脚本+主页面GUI+测速+创建系统托盘等功能
