@@ -33,7 +33,8 @@ Rime-words-counter是一款用于rime输入法进行统计字数的脚本，按�
 
 > 备注：多设备使用时，不同的版本不影响字数统计。即，你可以在公司电脑用字数版，在家里电脑用明文版。
 #### 两者的csv文件对比示例
-![image](演示GIF图/Pasted image 20250331195513.png)
+![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/Pasted%20image%2020250331195513.png?raw=true)
+
 #### 脚本工作过程
 当words_counter. lua被Rime输入法正确调用时，会在py_wordscounter文件夹里生成一个命名为words_input.csv的文档，记录了每次打字上屏时的时间点、汉字个数、汉字明文 (如果是字数版，则只生成前两个)。
 通过Python脚本words_counter. py处理该csv文档，按天/月/年/总这四个时间维度统计字数，保存到words_count_history.json文档里。
