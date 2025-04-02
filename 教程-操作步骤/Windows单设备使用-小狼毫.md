@@ -1,5 +1,5 @@
 #### 准备
-请首先确定电脑是否都有python环境，且已经安装了依赖的库。
+请首先确定电脑是否都有python环境，且已经安装了依赖的库。  
 Windows依赖以下库：
 ```
 pip install portalocker pystray pillow pywin32 watchdog schedule
@@ -32,8 +32,8 @@ engine:
 ##### 第6步
 保存以上两个文件的修改后，点击rime输入法-重新部署，让该lua脚本生效。打字，看py_wordscounter文件夹内是否生成words_input.csv文件，且表头和列表数据都正常。
 ##### 第7步
-打开words_counter. py，修改CSV_FILE 和JSON_FILE，用同个文件夹路径即可。
-> CSV_FILE：存放lua脚本生成的csv文档的路径，py脚本需要读取这个文档来处理数据；
+打开words_counter. py，修改CSV_FILE 和JSON_FILE，用同个文件夹路径即可。  
+> CSV_FILE：存放lua脚本生成的csv文档的路径，py脚本需要读取这个文档来处理数据；  
 > JSON_FILE：生成&读取统计后的字数数据以及保存历史数据的文档。
 ```
 示例：
@@ -41,18 +41,18 @@ CSV_FILE = r'C:\Users\电脑设备名\AppData\Roaming\Rime\py_wordscounter\words
 JSON_FILE = r'C:\Users\电脑设备名\AppData\Roaming\Rime\py_wordscounter\words_count_history.json'
 ```
 ##### 第8步
-修改完毕后，运行words_counter. py即可。
-在正确设置的情况下，你的桌面右下角应该已经出现字数统计的悬浮窗口，系统托盘出现蓝色icon的“字”图标。
-悬浮窗口等级比较高，全屏看视频的时候也会出现在最前方，忍不了的可以X关掉。关掉后可通过系统托盘“切换悬浮窗”再调出来。
-右键系统托盘icon，可打开gui主页面查看详细信息、历史记录和测速。
-
+修改完毕后，运行words_counter. py即可。  
+在正确设置的情况下，你的桌面右下角应该已经出现字数统计的悬浮窗口，系统托盘出现蓝色icon的“字”图标。  
+悬浮窗口等级比较高，全屏看视频的时候也会出现在最前方，忍不了的可以X关掉。关掉后可通过系统托盘“切换悬浮窗”再调出来。  
+右键系统托盘icon，可打开gui主页面查看详细信息、历史记录和测速。  
+  
 Enjoy it.
 
 #### 关于自启动和后台静默运行
 当前脚本默认需要依赖cmd运行，关闭cmd会中止脚本运行。至于如何摆脱终端，请自行搜索吧。  
-像我这样的小白，直接问DeepSeek，“我有一个python脚本，想要在win10里摆脱cmd运行，想要开启自启动以及在后台静默运行，要怎么设置”，会给完整的操作步骤去实现的。
-我自己是用pythonw.exe+快捷方式，再把这个快捷方式扔到开机自启动文件夹的形式实现的。
-详细的操作步骤问AI吧，这里不多赘述。
+像我这样的小白，直接问DeepSeek，“我有一个python脚本，想要在win10里摆脱cmd运行，想要开启自启动以及在后台静默运行，要怎么设置”，会给完整的操作步骤去实现的。  
+我自己是用pythonw.exe+快捷方式，再把这个快捷方式扔到开机自启动文件夹的形式实现的。  
+详细的操作步骤问AI吧，这里不多赘述。  
 #### 备注
 运行后，目录结构应该是这样的↓
 ```
