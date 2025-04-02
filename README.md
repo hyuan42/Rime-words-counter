@@ -15,17 +15,14 @@ Rime-words-counter是一款用于rime输入法进行统计字数的脚本，按�
 # 效果预览
 #### Mac端 - 鼠须管
 在系统顶部状态栏 (menus bar)显示今日输入的字数，可以打开详细数据，进行测速、查看历史数据等操作。
-<p align="center">
-  <img  height="400" src="[https://github.com/Moonvy/Figma-Net-OK/raw/master/FigmaNetOK-CLI%E6%BC%94%E7%A4%BA2.gif](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/Mac%E6%BC%94%E7%A4%BA.gif?raw=true)">
-</p>
+![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/Mac%E6%BC%94%E7%A4%BA.gif?raw=true)
 
 #### Windows端 - 小狼毫
 在桌面生成一个悬浮窗口，显示今日输入的字数。可切换关闭/显示该悬浮窗口，可通过系统托盘图标打开详细数据，进行测速、查看历史数据等操作。
-<p align="center">
-  <img  height="400" src="[https://github.com/Moonvy/Figma-Net-OK/raw/master/FigmaNetOK-CLI%E6%BC%94%E7%A4%BA2.gif](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/Mac%E6%BC%94%E7%A4%BA.gif?raw=true)">
-</p>
+![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/win%E6%BC%94%E7%A4%BA.gif?raw=true)
+
 #### 查看历史数据记录
-![[img/历史记录.gif]]
+![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95.gif?raw=true)
 
 # 版本说明
 本脚本实现原理是——通过lua记录上屏的文字/字数到csv本地文档，再用Python脚本来处理数据。因此，本项目共提供两个版本：明文版&字数版。最后再根据鼠须管、小狼毫进行区分。
@@ -36,7 +33,7 @@ Rime-words-counter是一款用于rime输入法进行统计字数的脚本，按�
 
 > 备注：多设备使用时，不同的版本不影响字数统计。即，你可以在公司电脑用字数版，在家里电脑用明文版。
 #### 两者的csv文件对比示例
-![[img/Pasted image 20250331195513.png]]
+![image](演示GIF图/Pasted image 20250331195513.png)
 #### 脚本工作过程
 当words_counter. lua被Rime输入法正确调用时，会在py_wordscounter文件夹里生成一个命名为words_input.csv的文档，记录了每次打字上屏时的时间点、汉字个数、汉字明文 (如果是字数版，则只生成前两个)。
 通过Python脚本words_counter. py处理该csv文档，按天/月/年/总这四个时间维度统计字数，保存到words_count_history.json文档里。
