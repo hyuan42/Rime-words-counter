@@ -55,7 +55,7 @@ pip install rumps portalocker watchdog schedule
 ```
 
 #### 操作步骤
-请按需选择查看以下文档：
+请按需选择查看以下文档：  
 [多设备使用，有多设备同步输入数据需求](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%95%99%E7%A8%8B-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/%E5%A4%9A%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%9C%89%E5%90%8C%E6%AD%A5%E9%9C%80%E6%B1%82.md)  
 [Windows单设备使用-小狼毫](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%95%99%E7%A8%8B-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/Windows%E5%8D%95%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8-%E5%B0%8F%E7%8B%BC%E6%AF%AB.md)  
 [macOS单设备使用-鼠须管](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%95%99%E7%A8%8B-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/macOS%E5%8D%95%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8-%E9%BC%A0%E9%A1%BB%E7%AE%A1.md)
