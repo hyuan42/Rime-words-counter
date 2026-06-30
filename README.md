@@ -1,91 +1,106 @@
-# 免责免喷声明XD
-#### 我是谁
-首先，我并不是程序员，而是一名设计师，完全0代码经验。前段时间为了做这个脚本，才接触第一门编程语言——Python，而且只看到第五课"循环结构"，代码知识可以等同于0。  
-本项目所有代码，皆由我一点一点通过DeepSeek修改、调整、拼凑出来的（非常的草台班子）。  
-为什么把这个放在最前面跟大家说呢？因为如果大家运行时出了什么BUG，我大概率不知道怎么修复🤣。只能劳烦大家根据自身的设备环境，直接上传脚本文件+发送错误代码到DeepSeek或者其他AI去问啦——我也是这么做的。  
-感谢DeepSeek，让以前不可能的事情变得可能，让0经验的我也能过一把程序员的瘾~~指Ctrl C + Ctrl V，哈哈~~  
-关于字数统计的功能，可能有更简洁的实现方式，但以我0编程经验来说，也想不到其他了。甚至这个脚本，也是我等了很久，希望等其他大佬实现，结果一直等不到，所以才自己摸索着弄出来的。  
-本项目里的代码是否符合规范我也不知道，可能会贻笑大方，但也更希望能抛砖引玉。  
-谢谢。
+
+
+# 叠甲声明XD
+我不是程序员，只是一名完全0代码经验的设计师，非常的草台班子。
+
+本项目v1.0所有代码全由DeepSeek对话调整出来，v1.1（当前版本）借由cursor，用Claude实现。
+
+为什么把这个放在最前面说呢？因为诸位运行时，如果出了什么BUG，我大概率也不知道咋回事🤣。只能劳烦大家根据自身的设备环境，上传脚本文件+发送错误代码到AI解决——我也是这么做的。
+
+提issue也可以的，将运行日志的报错代码贴上来（不一定能修好就是了）。
 
 # Rime-words-counter简介
-Rime-words-counter是一款用于rime输入法进行统计字数的脚本，按天/月/年/总这几个时间维度统计历史数据，同时可以进行输入测速等功能。  
-该脚本并非由rime内部引擎实现的，而是借由python实现，因此需要电脑安装python环境以及正确安装依赖的库。  
+Rime-words-counter是一款用于Rime输入法进行统计字数的脚本，按天/月/年/总这几个时间维度统计历史数据，亦可以进行输入测速。
+
+本仓库提供Mac-鼠须管、Win-小狼毫的打包版本，开箱即用。
+
 #### 功能特性
-✅统计本日字数，显示在状态栏/悬浮窗口；  
-✅按"总-年-月-天”四个维度将历史数据归类，通过GUI界面进行查看；  
+
+✅统计本日字数，显示在状态栏/悬浮窗口；
+
+✅按"总-年-月-天”四个维度将历史数据归类，通过GUI界面进行查看；
+
 ✅实时测速；
 
 # 效果预览
-#### Mac端 - 鼠须管
-在系统顶部状态栏 (menus bar)显示今日输入的字数，可以打开详细数据，进行测速、查看历史数据等操作。  
-![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/Mac%E6%BC%94%E7%A4%BA.gif?raw=true)
+### Mac端 - 鼠须管
+在系统顶部状态栏 (menus bar)显示今日输入的字数，可以打开详细数据，进行测速、查看历史数据等操作。
 
-#### Windows端 - 小狼毫
-在桌面生成一个悬浮窗口，显示今日输入的字数。可切换关闭/显示该悬浮窗口，可通过系统托盘图标打开详细数据，进行测速、查看历史数据等操作。  
-![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/win%E6%BC%94%E7%A4%BA.gif?raw=true)
+![image](https://github.com/hyuan42/Rime-words-counter/blob/main/预览图/Pasted%20image%2020260629154801.png?raw=true)
+### Windows端 - 小狼毫
+在桌面生成一个悬浮窗口，显示今日输入的字数。
+同时在系统托盘生成图标 (蓝底+字的icon)，可通过图标切换显示悬浮窗口、打开详细数据，进行测速、查看历史数据等操作。
 
-#### 查看历史数据记录
-![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95.gif?raw=true)
+![image](https://github.com/hyuan42/Rime-words-counter/blob/main/预览图/Pasted%20image%2020260629141852.png?raw=true)
+### 按年/月查看历史数据记录-趋势-热力图
+![image](https://raw.githubusercontent.com/hyuan42/Rime-words-counter/refs/heads/main/%E9%A2%84%E8%A7%88%E5%9B%BE/Pasted%20image%2020260629141630.png)
+![image](https://raw.githubusercontent.com/hyuan42/Rime-words-counter/refs/heads/main/%E9%A2%84%E8%A7%88%E5%9B%BE/Pasted%20image%2020260629154440.png)
+### 明文版Vs字数版
+默认字数版，可通过“设置”开启明文版。
+- 字数版：只记录上屏的字数到csv，不记录明文，隐私性更好。
+- 明文版：所有上屏文字都会被记录到本地csv。
 
-# 版本说明
-本脚本实现原理是——通过lua记录上屏的文字/字数到csv本地文档，再用Python脚本来处理数据。因此，本项目共提供两个版本：明文版&字数版。最后再根据鼠须管、小狼毫进行区分。
-#### 明文版
-本地生成的csv文档会将上屏的字数+文本都记录下来(适合文字工作者？例如在编辑过程文档丢失，通过这个文档把某个时间段输入的文本都找回来，或者适合想具体知道某个时间点打了什么字的人)。
-#### 字数版 
-本地生成的csv文档只记录上屏的字数，不记录明文，隐私性更好。
+> 注1：切换明文/字数版时，实际上是改动了Lua脚本，因此每次切换之后，需重新部署Rime输入法才能生效。
+> 
+> 注2：多设备使用时，不同的版本不影响字数统计。即，你可以在公司电脑用字数版，在家里电脑用明文版。
 
-> 备注：多设备使用时，不同的版本不影响字数统计。即，你可以在公司电脑用字数版，在家里电脑用明文版。
-#### 两者的csv文件对比示例
-![image](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%BC%94%E7%A4%BAGIF%E5%9B%BE/Pasted%20image%2020250331195513.png?raw=true)
+![image](https://raw.githubusercontent.com/hyuan42/Rime-words-counter/refs/heads/main/%E9%A2%84%E8%A7%88%E5%9B%BE/csv%E5%AF%B9%E6%AF%94.png)
+# 功能说明
+本脚本实现原理是——
+通过Lua记录上屏的文本/字数到csv本地文档，再用Python脚本来处理数据，并创建GUI界面将该数据显示出来。
+### 具体的工作过程
+当本项目Lua脚本被Rime输入法正确调用时，会在Rime的用户文件夹中创建py_wordscounter文件夹，并生成一个csv的文档，用于记录每次打字上屏时的时间点、汉字个数、汉字明文 (如果是字数版，则只记录前两个)。
+通过Python脚本处理该csv文档，按天/月/年/总这四个时间维度统计字数，汇总保存到history.json文档里。
+创建一个GUI界面，将json文档的统计数据在前端显示出来。
 
-#### 脚本工作过程
-当words_counter. lua被Rime输入法正确调用时，会在py_wordscounter文件夹里生成一个命名为words_input.csv的文档，记录了每次打字上屏时的时间点、汉字个数、汉字明文 (如果是字数版，则只生成前两个)。  
-通过Python脚本words_counter. py处理该csv文档，按天/月/年/总这四个时间维度统计字数，保存到words_count_history.json文档里。  
-创建一个GUI界面，将json文档的统计数据在前端显示出来。  
-打字上屏→监测到csv文档变化→统计新增数据累加到json→监测到json文档变化→将数据变化显示在前端。  
-每天00:00自动清理csv文档，保障数据处理时的轻量化（定时清理的时间可按需修改天数，同时也提供手动清理的功能）。  
+流程：
+打字上屏→Lua脚本采集进csv文档→Python统计新增数据累加到json文档→将json的数据变化显示在前端。
+每天00:00自动清理csv文档，保障数据处理时的轻量化（定时清理的时间间隔可按需自定义，同时也提供手动清理的功能）。
 # 使用方法
-运行本脚本需要你的电脑安装Python环境，同时——  
-Windows依赖以下库：
+### Step1.下载
+在 [Release](https://github.com/hyuan42/Rime-words-counter/releases) 中，按需下载鼠须管或者小狼毫版本，解压。
+### Step2. 配置Lua脚本
+打开文件夹，将words_counter.lua脚本移动到Rime的「用户文件夹」的「lua」文件夹中，没有「lua」文件夹就手动新建文件夹并命名为「lua」。
+打开“你的配置方案.schema.yaml”，在processors下添加"lua_processor@* words_counter"；
 ```
-pip install portalocker pystray pillow pywin32 watchdog schedule
+示例：
+engine:
+  processors:
+    - 其他lua...   
+    - lua_processor@*words_counter #新增这个，星号*的后面不要带空格
 ```
+保存.yaml后，点击Rime输入法-重新部署，让该lua脚本生效。
+打字，看用户文件夹内是否自动生成py_wordscounter，且文件夹内是否生成words_input.csv文件，且表头和列表数据都正常。
+### Step3. 使用
+双击字数统计.app或字数统计.exe打开软件，软件将自动识别csv文档并开始工作。建议：可将该软件设置为开机自启动。
+软件开始工作后，会生成配置文件与最重要的history.json文档，该json文档将记录你每天的字数汇总，可定时备份该文档以防数据丢失。
+可通过【菜单栏-配置文件夹】打开并查看json，或通过【菜单栏-设置】修改该json的位置。
+### Step4. 多设备使用，云盘同步
+如果你是多设备，想把同一天内多个设备的字数都汇总统计，可在【设置】中，将历史history.json的路径修改到云盘内，并按需修改每个设备的名字（设备不能同名）。
+#### 多设备同步注意事项
+##### ⚠️一、使用A设备一段时间后，增加设备B同步时
+多设备修改到同一路径时，history. json文件是覆盖行为。即，将新设备B的路径修改到云盘的时候，设备B的新json可能会覆盖旧json，导致旧数据丢失。
+✅Do：同步前，先备份云盘中的旧json，再执行B设备修改路径的操作。
+若过往数据被覆盖，则：
+- （推荐）将新json中包含了多个"devices"的字段替换到旧json文件里。
+- 或者，将json备份中的"daily、monthly、yearly、total"数据替换进新的json文件里；
+##### ⚠️二、有两份不同的JSON
+如果A、B设备各自运行了一段时间，有2份不同的JSON，这时才想合并——
+✅Do：同步前，将两份文件发给ai工具，让ai帮你将两份文件合并成一份，同一日期的字数相加即可。随后再将该合并版的JSON放到云盘 (文件命名记得改回words_count_history.json)；
+##### ⚠️三、多设备同时打字写入JSON
+如果多设备没有同时在打字，比如白天在公司，晚上在家，始终只有一个设备在打字的话，可以忽略这点。
+但如果多设备同时在打字（白天你在公司，同时家里有人在用你电脑），由于两个设备同时有打字行为，且刚好同时在写入JSON，同步盘会无法识别文件锁的状态，例如onedrive/iCloud等会触发文件冲突的保护机制，导致同步盘中生成另一个按设备命名的json文件，需要手动去解决这些冲突文件。
 
-macOS依赖以下库：
-```
-pip install rumps portalocker watchdog schedule
-```
-
-#### 操作步骤
-请按需选择查看以下文档：  
-[多设备使用，有多设备同步输入数据需求](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%95%99%E7%A8%8B-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/%E5%A4%9A%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%9C%89%E5%90%8C%E6%AD%A5%E9%9C%80%E6%B1%82.md)  
-[Windows单设备使用-小狼毫](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%95%99%E7%A8%8B-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/Windows%E5%8D%95%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8-%E5%B0%8F%E7%8B%BC%E6%AF%AB.md)  
-[macOS单设备使用-鼠须管](https://github.com/hyuan42/Rime-words-counter/blob/main/%E6%95%99%E7%A8%8B-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/macOS%E5%8D%95%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8-%E9%BC%A0%E9%A1%BB%E7%AE%A1.md)
-
-> 备注：如果想修改定时清理csv的天数，请在words_counter. py里搜索"自动清理csv文档"修改以下代码 
-```
-# 括号留空即每天清理一次，想要多少天即在()中填入你想要的天数
-schedule.every (). day.at ("00:00"). do (clear_csv)
-```
-
-
-# 存在的一些问题or可优化项
-#### 1、没有封装成更方便的可执行文件
-我尝试过用pyinstaller封装，但是失败了。鉴于我0编程经验，能做到这一步已经很不容易，目前版本已经能满足我个人需求，就不折腾了。  
-如果有路过的大佬帮忙看看，自然是极好的。
-#### 2、LUA脚本只记录纯汉字，不支持记录标点符号
+# 其他
+#### 1、LUA脚本只记录纯汉字，不支持记录标点符号
 有记录标点符号的需求的，请把LUA文件和你的需求发给AI进行优化~
-#### 3、自启动与后台运行
-默认是需要依赖终端/cmd运行python脚本的，关闭终端/cmd会中止脚本运行。至于如何摆脱终端/cmd，请自行搜索适合你设备的方法吧。  
-像我这样的小白，直接问DeepSeek吧，“我有一个python脚本，想要在macos/windows里摆脱终端/cmd运行，想要开启自启动以及在后台运行”，会给完整的操作步骤去实现的。
-#### 4、多设备同步可能会遇到的情况
-如果多设备没有同时在打字，比如白天在公司，晚上在家，始终只有一个设备在打字的话，可以忽略这点。  
-但如果多设备同时在打字（白天你在公司，同时家里有人在用你电脑），由于两个设备同时有打字行为，会同时写入数据到json中，而同步盘没办法识别文件锁的状态，例如onedrive/iCloud等就会自动触发文件冲突的保护机制，导致同步盘中生成另一个按设备命名的json文件，需要手动去解决这些冲突文件。  
-我不知道咋解决，再加上我个人没有多设备同时运行打字的场景，所以对我没什么影响，就不管了。
-#### 5 、Windows小狼毫的悬浮弹窗层级问题
-悬浮窗口等级比较高，全屏看视频的时候也会出现在最前方。这个没办法，更好的实现方式是像 [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor) 显示在任务栏上会更好，问了一下AI需要用到C语言，对我来说更超纲了，所以不折腾。
-#### 6、macOS鼠须管的lua文件运行时似乎有小bug
-有个奇怪的bug，部署words_counter.lua脚本并打字后，首次生成的csv是有表头的。如果把该首次生成的csv文件删除，重新打字后生成的就没有表头了。  
-没有表头的话，python无法正确处理数据。  
-解决方法：删除没有表头的csv，重新部署，再生成个新的就好；或者，手动添加表头。
+#### 2 、Windows小狼毫的悬浮弹窗层级问题
+悬浮窗口等级比较高，全屏看视频的时候也会出现在最前方。这个没办法，更优雅的实现方式是像 [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor) 显示在任务栏上。但折腾起来太麻烦了，放弃。
+#### 3、用obsidian来统计数据，无需下载软件
+详情可以参考该issue中提供的方法。按该方法，仅需下载本项目中的Lua脚本即可~
+#### 4、若不想用软件版，想用Python脚本
+请根据设备下载对应的版本的源文件，pip requirements.txt安装依赖后——
+👉win版运行words_counter. py
+👉mac版运行status_bar_app.py
+
+
