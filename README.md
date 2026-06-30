@@ -118,7 +118,9 @@ engine:
 详情可以参考该issue中提供的方法。按该方法，仅需下载本项目中的Lua脚本即可~
 #### 4、若不想用软件版，想用Python脚本
 请根据设备下载对应的版本的源文件，pip requirements.txt安装依赖后——
+
 👉win版运行words_counter. py
+
 👉mac版运行status_bar_app.py
 
 
