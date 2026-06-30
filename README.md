@@ -115,7 +115,7 @@ engine:
 #### 2 、Windows小狼毫的悬浮弹窗层级问题
 悬浮窗口等级比较高，全屏看视频的时候也会出现在最前方。这个没办法，更优雅的实现方式是像 [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor) 显示在任务栏上。但折腾起来太麻烦了，放弃。
 #### 3、用obsidian来统计数据，无需下载软件
-详情可以参考该issue中提供的方法。按该方法，仅需下载本项目中的Lua脚本即可~
+详情可以参考该[issue#1](https://github.com/hyuan42/Rime-words-counter/issues/1)中提供的方法。按该方法，仅需下载本项目中的Lua脚本即可~
 #### 4、若不想用软件版，想用Python脚本
 请根据设备下载对应的版本的源文件，pip requirements.txt安装依赖后——
 
